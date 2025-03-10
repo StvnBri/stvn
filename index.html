@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stvn</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3B82F6",
+              "primary-dark": "#60A5FA",
+            },
+          },
+        },
+      };
+    </script>
+    <link href="styles.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #040404; /* Dark background */
+        color: #ffffff; /* Light text color */
+      }
+      .project-card:hover .project-overlay {
+        opacity: 1;
+      }
+      .skill-icon {
+        transition: all 0.3s ease;
+      }
+      .skill-icon:hover {
+        transform: translateY(-5px);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-900 text-gray-200 transition-colors duration-200">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-gray-900 shadow-sm">
+      <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between h-16">
+          <!-- Logo -->
+          <div class="flex items-center">
+            <a href="#" class="text-2xl font-bold text-gray-200">STVN</a>
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="flex md:hidden">
+            <button
+              id="mobile-menu-button"
+              class="p-2 rounded-md text-gray-400 hover:bg-gray-800 focus:outline-none"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden md:flex items-center space-x-6">
+            <a
+              href="#about"
+              class="text-gray-200 hover:text-gray-400 transition-colors"
+              >About</a
+            >
+            <a
+              href="#experience"
+              class="text-gray-200 hover:text-gray-400 transition-colors"
+              >Experience</a
+            >
+            <a
+              href="#education"
+              class="text-gray-200 hover:text-gray-400 transition-colors"
+              >Education</a
+            >
+            <a
+              href="#skills"
+              class="text-gray-200 hover:text-gray-400 transition-colors"
+              >Skills</a
+            >
+            <a
+              href="#projects"
+              class="text-gray-200 hover:text-gray-400 transition-colors"
+              >Projects</a
+            >
+            <a
+              href="#contact"
+              class="text-gray-200 hover:text-gray-400 transition-colors"
+              >Contact</a
+            >
+            <button
+              id="dark-mode-toggle"
+              class="p-2 rounded-lg hover:bg-gray-800 transition-all duration-200"
+            >
+              <i class="fas fa-moon text-gray-400"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div
+          id="mobile-menu"
+          class="md:hidden fixed top-16 left-0 right-0 bg-gray-900 border-t border-gray-700 shadow-lg transition-all duration-300 ease-in-out"
+        >
+          <div class="flex flex-col py-4">
+            <a
+              href="#about"
+              class="px-6 py-3 text-gray-200 hover:bg-gray-800 transition-colors"
+              >About</a
+            >
+            <a
+              href="#experience"
+              class="px-6 py-3 text-gray-200 hover:bg-gray-800 transition-colors"
+              >Experience</a
+            >
+            <a
+              href="#education"
+              class="px-6 py-3 text-gray-200 hover:bg-gray-800 transition-colors"
+              >Education</a
+            >
+            <a
+              href="#skills"
+              class="px-6 py-3 text-gray-200 hover:bg-gray-800 transition-colors"
+              >Skills</a
+            >
+            <a
+              href="#projects"
+              class="px-6 py-3 text-gray-200 hover:bg-gray-800 transition-colors"
+              >Projects</a
+            >
+            <a
+              href="#contact"
+              class="px-6 py-3 text-gray-200 hover:bg-gray-800 transition-colors"
+              >Contact</a
+            >
+            <div class="border-t border-gray-700 mt-2 pt-2">
+              <button
+                id="dark-mode-toggle-mobile"
+                class="w-full px-6 py-3 flex items-center text-gray-200 hover:bg-gray-800 transition-all duration-200"
+              >
+                <i class="fas fa-moon text-gray-400 mr-3"></i>
+                <span>Dark Mode</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      class="hero-section min-h-screen flex items-center relative overflow-hidden"
+    >
+      <div class="container mx-auto px-4 py-16 relative z-10">
+        <div
+          class="flex flex-col lg:flex-row items-center justify-between gap-12"
+        >
+          <!-- Left Content -->
+          <div class="flex-1 max-w-2xl">
+            <div
+              class="welcome-tag inline-flex items-center gap-2 bg-gray-800 rounded-full px-4 py-2 mb-6"
+            >
+              <span class="text-yellow-500">👋</span>
+              <span class="font-medium">Hello There!</span>
+            </div>
+
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+              I'm
+              <span class="text-gradient">Steven</span>,<br />
+              <span class="profession-text"
+                >Software Quality Assurance Engineer</span
+              >
+            </h1>
+
+            <p class="text-gray-300 text-lg mb-8 max-w-xl">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ipsam
+              illum dolor quibusdam dolorem, sapiente dolorum iste incidunt
+              error quia!
+              <!-- I'm a passionate Software Quality Assurance Engineer with
+              expertise in automotive systems testing, collaborating with global
+              teams to deliver reliable software solutions. -->
+            </p>
+
+            <div class="flex items-center gap-4">
+              <!-- <a href="#portfolio" class="view-portfolio-btn group">
+                View My Portfolio
+                <svg
+                  class="w-5 h-5 inline-block transition-transform group-hover:translate-x-1"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 7l5 5m0 0l-5 5m5-5H6"
+                  />
+                </svg>
+              </a> -->
+              <a href="#contact" class="hire-me-btn"> Contact Me </a>
+            </div>
+
+            <!-- Tags -->
+            <div class="flex flex-wrap gap-3 mt-8">
+              <span class="skill-tag">UI/UX Design</span>
+              <span class="skill-tag">Web Development</span>
+              <span class="skill-tag">Automation Testing</span>
+              <span class="skill-tag">C Programming</span>
+              <span class="skill-tag">WinAMS</span>
+              <span class="skill-tag">Hew</span>
+              <span class="skill-tag">Figma</span>
+              <span class="skill-tag">Manual Testing</span>
+              <span class="skill-tag">Unit Testing</span>
+            </div>
+          </div>
+
+          <!-- Right Content - Image -->
+          <div class="flex-1 relative">
+            <div class="hero-image-container">
+              <img
+                src="img/USON, STEVEN BRIAN F.0782-min.jpg"
+                alt="Steven Brian Feting Uson"
+                class="hero-image"
+              />
+              <div class="floating-badge top-0 right-0">
+                <span>Software QA</span>
+              </div>
+              <div class="floating-badge bottom-0 left-0">
+                <span>Integration Testing</span>
+              </div>
+              <div class="floating-badge top-2 left-0">
+                <span>Unit Testing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Background Elements -->
+      <div
+        class="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-to-br from-blue-50 to-transparent dark:from-blue-900/20 -z-10 blur-3xl"
+      ></div>
+      <div
+        class="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr from-yellow-50 to-transparent dark:from-yellow-900/20 -z-10 blur-3xl"
+      ></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-800">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-12">About Me</h2>
+        <div class="max-w-3xl mx-auto">
+          <p class="text-gray-400 leading-relaxed mb-6">
+            I am a Bachelor of Science in Information Technology graduate from
+            Bulacan State University with a specialization in Web and Mobile
+            Development and I aim to work as an IT professional. With a strong
+            passion for different fields of IT, I am motivated to learn and
+            committed to delivering quality work to ensure project success.
+          </p>
+          <!-- <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id sed
+            consequuntur perspiciatis vitae dolore accusantium nihil explicabo
+            nisi temporibus dolorem.
+          </p> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section
+      id="experience"
+      class="relative h-screen py-16 bg-gray-900 overflow-hidden"
+    >
+      <div class="container mx-auto px-4 h-full flex flex-col">
+        <h2
+          class="text-3xl font-bold text-center mb-12 flex-shrink-0 opacity-0"
+        >
+          Work Experience
+        </h2>
+
+        <div class="relative flex-1 min-h-0">
+          <div class="absolute inset-0 overflow-y-auto custom-scrollbar">
+            <div class="experience-timeline">
+              <!-- Current Role -->
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="timeline-date">2023 - Present</div>
+                  <div class="timeline-card">
+                    <div class="timeline-header">
+                      <h3 class="text-xl font-bold mb-2">
+                        Software Quality Assurance Engineer
+                      </h3>
+                      <div class="company-info">
+                        <span class="company tsukiden"
+                          >Tsukiden Global Solutions Inc.</span
+                        >
+                        <span class="location">Ortigas, Pasig City</span>
+                      </div>
+                      <div class="client-badge">
+                        <span class="client-label text-red-700"
+                          ><i>Client:</i></span
+                        >
+                        DENSO TECHNO PHILIPPINES, INC.
+                      </div>
+                    </div>
+                    <div class="timeline-body">
+                      <div class="achievement-list">
+                        <div class="achievement-item">
+                          <h4>Unit Testing (Automotive Systems)</h4>
+                          <p>
+                            Developed and executed comprehensive unit tests for
+                            C-based automotive systems, utilizing Microsoft
+                            Excel with custom add-in tools for process flow
+                            simulation and error detection.
+                          </p>
+                        </div>
+                        <div class="achievement-item">
+                          <h4>Automation Testing</h4>
+                          <p>
+                            Implemented automated testing solutions for critical
+                            automotive components including sensors, Controller
+                            Area Network (CAN), ECUs, and vehicle speed.
+                          </p>
+                        </div>
+                        <div class="achievement-item">
+                          <h4>Integration Testing</h4>
+                          <p>
+                            Led system integration testing using WinAMS,
+                            ensuring seamless module interaction and maintaining
+                            high system reliability standards.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Previous Role -->
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="timeline-date">2023</div>
+                  <div class="timeline-card">
+                    <div class="timeline-header">
+                      <h3 class="text-xl font-bold mb-2 text-start">
+                        Digital Marketing Engineer
+                      </h3>
+                      <div class="company-info">
+                        <span class="company">Xentra Solutions Inc.</span>
+                        <span class="location">Malolos, Bulacan</span>
+                      </div>
+                    </div>
+                    <div class="timeline-body">
+                      <div class="achievement-list">
+                        <div class="achievement-item text-start">
+                          <h4>Digital Marketing Prompt Engineer</h4>
+                          <p>
+                            Engineered and executed data-driven digital
+                            marketing campaigns, achieving a 45% increase in
+                            user engagement across platforms.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Earlier Role -->
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="timeline-date">2019</div>
+                  <div class="timeline-card">
+                    <div class="timeline-header">
+                      <h3 class="text-xl font-bold mb-2">
+                        Technical Support Staff
+                      </h3>
+                      <div class="company-info">
+                        <span class="company pldt">PLDT Telephone Company</span>
+                        <span class="location">Malolos, Bulacan</span>
+                      </div>
+                    </div>
+                    <div class="timeline-body">
+                      <div class="achievement-list">
+                        <div class="achievement-item">
+                          <h4>Technical Support Staff</h4>
+                          <p>
+                            Interned as a staff member in the Main Distribution
+                            Frame office.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-16 bg-gray-800">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Education</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-1 gap-8 max-w-3xl mx-auto">
+          <!-- College -->
+          <div
+            class="bg-gray-900 rounded-xl shadow-lg p-8 text-center transition-all hover:-translate-y-2"
+          >
+            <div class="flex flex-col items-center">
+              <div
+                class="w-32 h-32 bg-gray-700 rounded-full flex items-center justify-center mb-4"
+              >
+                <img
+                  src="https://unitesandba.wordpress.com/wp-content/uploads/2012/10/10332_134192878089_974785_n.jpg"
+                  alt="Bulacan State University Logo"
+                  class="text-gray-500"
+                />
+              </div>
+              <h3 class="text-xl font-bold">
+                Bachelor of Science in Information Technology
+              </h3>
+              <p class="text-gray-400 mt-2">Bulacan State University</p>
+              <div
+                class="inline-block bg-primary/10 dark:bg-primary-dark/10 px-4 py-2 rounded-full"
+              >
+                <p class="text-primary dark:text-primary-dark font-semibold">
+                  Graduated 2023
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-12">Skills</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div
+            class="skill-icon text-center p-6 bg-gray-900 rounded-lg shadow-lg"
+          >
+            <i class="fab fa-html5 text-4xl text-orange-500 mb-4"></i>
+            <h3 class="font-medium">HTML5</h3>
+          </div>
+          <div
+            class="skill-icon text-center p-6 bg-gray-900 rounded-lg shadow-lg"
+          >
+            <i class="fab fa-css3-alt text-4xl text-blue-500 mb-4"></i>
+            <h3 class="font-medium">CSS3</h3>
+          </div>
+          <div
+            class="skill-icon text-center p-6 bg-gray-900 rounded-lg shadow-lg"
+          >
+            <i class="fab fa-js text-4xl text-yellow-500 mb-4"></i>
+            <h3 class="font-medium">JavaScript</h3>
+          </div>
+          <div
+            class="skill-icon text-center p-6 bg-gray-900 rounded-lg shadow-lg"
+          >
+            <i class="fab fa-java text-4xl text-blue-400 mb-4"></i>
+            <h3 class="font-medium">Java</h3>
+          </div>
+          <div
+            class="skill-icon text-center p-6 bg-gray-900 rounded-lg shadow-lg"
+          >
+            <img
+              src="img/64px-Spring_Boot.svg.png"
+              alt="Spring Boot"
+              class="fab w-12 h-12 mb-4"
+            />
+            <h3 class="font-medium">Spring Boot</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-800">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-12">Projects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project Card 1 -->
+          <div
+            class="project-card relative rounded-lg overflow-hidden shadow-lg"
+          >
+            <img src="" alt="Project 1" class="w-full" />
+            <div
+              class="project-overlay absolute inset-0 bg-black bg-opacity-75 opacity-0 transition-opacity duration-300 flex items-center justify-center"
+            >
+              <div class="text-center p-6">
+                <h3 class="text-white text-xl font-bold mb-2">Project Name</h3>
+                <p class="text-gray-300 mb-4">
+                  Short project description goes here
+                </p>
+                <a
+                  href="#"
+                  class="inline-block bg-primary dark:bg-primary-dark text-white px-4 py-2 rounded-lg hover:opacity-90 transition-opacity"
+                >
+                  View Project
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Project Card 2 -->
+          <div
+            class="project-card relative rounded-lg overflow-hidden shadow-lg"
+          >
+            <img
+              src="https://via.placeholder.com/400x300"
+              alt="Project 2"
+              class="w-full"
+            />
+            <div
+              class="project-overlay absolute inset-0 bg-black bg-opacity-75 opacity-0 transition-opacity duration-300 flex items-center justify-center"
+            >
+              <div class="text-center p-6">
+                <h3 class="text-white text-xl font-bold mb-2">Project Name</h3>
+                <p class="text-gray-300 mb-4">
+                  Short project description goes here
+                </p>
+                <a
+                  href="#"
+                  class="inline-block bg-primary dark:bg-primary-dark text-white px-4 py-2 rounded-lg hover:opacity-90 transition-opacity"
+                >
+                  View Project
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Project Card 3 -->
+          <div
+            class="project-card relative rounded-lg overflow-hidden shadow-lg"
+          >
+            <img
+              src="https://via.placeholder.com/400x300"
+              alt="Project 3"
+              class="w-full"
+            />
+            <div
+              class="project-overlay absolute inset-0 bg-black bg-opacity-75 opacity-0 transition-opacity duration-300 flex items-center justify-center"
+            >
+              <div class="text-center p-6">
+                <h3 class="text-white text-xl font-bold mb-2">Project Name</h3>
+                <p class="text-gray-300 mb-4">
+                  Short project description goes here
+                </p>
+                <a
+                  href="#"
+                  class="inline-block bg-primary dark:bg-primary-dark text-white px-4 py-2 rounded-lg hover:opacity-90 transition-opacity"
+                >
+                  View Project
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-800">
+      <div class="container mx-auto px-6 rounded-xl p-6 text-justify">
+        <h2 class="text-2xl font-semibold text-gray-200 mb-4 text-center">
+          Contact Me
+        </h2>
+        <div
+          class="space-y-3 text-lg text-gray-400 flex flex-col items-center justify-normal"
+        >
+          <p>
+            <strong>Phone:</strong>
+            <a
+              href="tel:+1234567890"
+              class="text-blue-500 font-medium hover:underline"
+              >+63 926 585 8612</a
+            >
+          </p>
+          <p>
+            <strong>Email:</strong>
+            <a
+              href="mailto:yourname@email.com"
+              class="text-blue-500 font-medium hover:underline"
+              >uson.stevenbrian.f.5107@gmail.com</a
+            >
+          </p>
+          <p>
+            <strong>Facebook:</strong>
+            <a
+              href="https://www.facebook.com/yourprofile"
+              target="_blank"
+              class="text-blue-500 font-medium hover:underline"
+              >facebook.com/yourprofile</a
+            >
+          </p>
+        </div>
+      </div>
+      <!-- <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-12">Get In Touch</h2>
+        <div class="max-w-2xl mx-auto">
+          <form class="space-y-6">
+            <div>
+              <label class="block text-sm font-medium mb-2">Name</label>
+              <input
+                type="text"
+                class="w-full px-4 py-2 rounded-lg border border-gray-600 bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-dark"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-medium mb-2">Email</label>
+              <input
+                type="email"
+                class="w-full px-4 py-2 rounded-lg border border-gray-600 bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-dark"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-medium mb-2">Phone Number</label>
+              <input
+                type="tel"
+                class="w-full px-4 py-2 rounded-lg border border-gray-600 bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-dark"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-medium mb-2">Message</label>
+              <textarea
+                rows="4"
+                class="w-full px-4 py-2 rounded-lg border border-gray-600 bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-dark"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="w-full bg-primary dark:bg-primary-dark text-white py-3 rounded-lg hover:opacity-90 transition-opacity"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div> -->
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-8">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="text-center md:text-left mb-4 md:mb-0">
+            <h3 class="text-xl font-bold">STEVEN BRIAN USON</h3>
+            <p class="text-gray-400">Software Quality Assurance Engineer I</p>
+          </div>
+          <div class="flex space-x-4">
+            <a
+              href="#"
+              class="text-gray-400 hover:text-primary dark:hover:text-primary-dark transition-colors"
+            >
+              <i class="fab fa-github text-2xl"></i>
+            </a>
+            <a
+              href="#"
+              class="text-gray-400 hover:text-primary dark:hover:text-primary-dark transition-colors"
+            >
+              <i class="fab fa-linkedin text-2xl"></i>
+            </a>
+            <a
+              href="#"
+              class="text-gray-400 hover:text-primary dark:hover:text-primary-dark transition-colors"
+            >
+              <i class="fab fa-twitter text-2xl"></i>
+            </a>
+          </div>
+        </div>
+        <!-- <div class="text-center mt-8 text-gray-600 dark:text-gray-400">
+          <p>2025 John Doe. All rights reserved.</p>
+        </div> -->
+      </div>
+    </footer>
+
+    <script>
+      // Dark mode toggle
+      const darkModeToggle = document.getElementById("dark-mode-toggle");
+      const darkModeToggleMobile = document.getElementById(
+        "dark-mode-toggle-mobile"
+      );
+      const html = document.documentElement;
+      const darkModeIcon = darkModeToggle.querySelector("i");
+      const darkModeIconMobile = darkModeToggleMobile.querySelector("i");
+
+      // Check for saved dark mode preference
+      const savedDarkMode = localStorage.getItem("darkMode") === "true";
+      if (savedDarkMode) {
+        html.classList.add("dark");
+      }
+
+      function updateDarkModeIcon(isDark) {
+        darkModeIcon.className = isDark
+          ? "fas fa-sun text-yellow-500"
+          : "fas fa-moon text-gray-400";
+        darkModeIconMobile.className = isDark
+          ? "fas fa-sun text-yellow-500 mr-2"
+          : "fas fa-moon text-gray-400 mr-2";
+      }
+
+      // Initial icon state
+      updateDarkModeIcon(savedDarkMode);
+
+      // Toggle dark mode
+      function toggleDarkMode() {
+        html.classList.toggle("dark");
+        const isDark = html.classList.contains("dark");
+        localStorage.setItem("darkMode", isDark);
+        updateDarkModeIcon(isDark);
+      }
+
+      darkModeToggle.addEventListener("click", toggleDarkMode);
+      darkModeToggleMobile.addEventListener("click", toggleDarkMode);
+
+      // Mobile menu functionality
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+
+      function toggleMobileMenu() {
+        mobileMenu.classList.toggle("hidden");
+        mobileMenuButton.classList.toggle("open");
+
+        // Prevent body scroll when menu is open
+        document.body.style.overflow = mobileMenu.classList.contains("hidden")
+          ? ""
+          : "hidden";
+      }
+
+      // Toggle menu on button click
+      mobileMenuButton.addEventListener("click", (e) => {
+        e.stopPropagation();
+        toggleMobileMenu();
+      });
+
+      // Close mobile menu when clicking a link
+      mobileMenuLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+          mobileMenuButton.classList.remove("open");
+          document.body.style.overflow = "";
+        });
+      });
+
+      // Close mobile menu when clicking outside
+      document.addEventListener("click", (e) => {
+        if (
+          !mobileMenuButton.contains(e.target) &&
+          !mobileMenu.contains(e.target) &&
+          !mobileMenu.classList.contains("hidden")
+        ) {
+          mobileMenu.classList.add("hidden");
+          mobileMenuButton.classList.remove("open");
+          document.body.style.overflow = "";
+        }
+      });
+
+      // Close mobile menu on window resize (if switching to desktop view)
+      window.addEventListener("resize", () => {
+        if (
+          window.innerWidth >= 768 &&
+          !mobileMenu.classList.contains("hidden")
+        ) {
+          mobileMenu.classList.add("hidden");
+          mobileMenuButton.classList.remove("open");
+          document.body.style.overflow = "";
+        }
+      });
+
+      // Handle smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute("href");
+          const targetElement = document.querySelector(targetId);
+
+          if (targetElement) {
+            const headerOffset = 64; // Height of the fixed header
+            const elementPosition = targetElement.getBoundingClientRect().top;
+            const offsetPosition =
+              elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+
+      // Experience section animations
+      function animateExperience() {
+        const section = document.getElementById("experience");
+        const title = section.querySelector("h2");
+        const items = section.querySelectorAll(".timeline-item");
+
+        // Animate title
+        title.style.animation = "fadeInUp 0.6s ease forwards";
+
+        // Animate timeline items
+        items.forEach((item, index) => {
+          const marker = item.querySelector(".timeline-marker");
+          const date = item.querySelector(".timeline-date");
+          const card = item.querySelector(".timeline-card");
+
+          // Set initial states
+          item.style.opacity = "0";
+          item.style.transform = "translateY(30px)";
+          marker.style.opacity = "0";
+          marker.style.transform = "scale(0.8)";
+          date.style.opacity = "0";
+          card.style.opacity = "0";
+          card.style.transform = "translateY(20px)";
+
+          // Animate with delays
+          setTimeout(() => {
+            item.style.transition = "all 0.6s ease";
+            item.style.opacity = "1";
+            item.style.transform = "translateY(0)";
+
+            setTimeout(() => {
+              marker.style.transition =
+                "all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)";
+              marker.style.opacity = "1";
+              marker.style.transform = "scale(1)";
+            }, 200);
+
+            setTimeout(() => {
+              date.style.transition = "all 0.4s ease";
+              date.style.opacity = "1";
+            }, 300);
+
+            setTimeout(() => {
+              card.style.transition =
+                "all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)";
+              card.style.opacity = "1";
+              card.style.transform = "translateY(0)";
+            }, 400);
+          }, index * 200);
+        });
+      }
+
+      // Intersection Observer for experience section
+      const experienceObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              animateExperience();
+              experienceObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+
+      // Start observing the experience section
+      document.addEventListener("DOMContentLoaded", () => {
+        const experienceSection = document.getElementById("experience");
+        experienceObserver.observe(experienceSection);
+      });
+    </script>
+  </body>
+</html>
