@@ -27,8 +27,6 @@
       @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
       body {
         font-family: "Poppins", sans-serif;
-        background-color: #040404; /* Dark background */
-        color: #ffffff; /* Light text color */
       }
       .project-card:hover .project-overlay {
         opacity: 1;
@@ -41,21 +39,29 @@
       }
     </style>
   </head>
-  <body class="bg-gray-900 text-gray-200 transition-colors duration-200">
+  <body
+    class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-200"
+  >
     <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-gray-900 shadow-sm">
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-900 shadow-sm"
+    >
       <div class="container mx-auto px-4">
         <div class="flex items-center justify-between h-16">
           <!-- Logo -->
           <div class="flex items-center">
-            <a href="#" class="text-2xl font-bold text-gray-200">STVN</a>
+            <a
+              href="#"
+              class="text-2xl font-bold text-gray-600 dark:text-gray-200"
+              >STEVEN BRIAN USON</a
+            >
           </div>
 
           <!-- Mobile menu button -->
           <div class="flex md:hidden">
             <button
               id="mobile-menu-button"
-              class="p-2 rounded-md text-gray-400 hover:bg-gray-800 focus:outline-none"
+              class="p-2 rounded-md text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none"
             >
               <svg
                 class="w-6 h-6"
@@ -77,39 +83,39 @@
           <div class="hidden md:flex items-center space-x-6">
             <a
               href="#about"
-              class="text-gray-200 hover:text-gray-400 transition-colors"
+              class="text-gray-800 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 transition-colors"
               >About</a
             >
             <a
               href="#experience"
-              class="text-gray-200 hover:text-gray-400 transition-colors"
+              class="text-gray-800 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 transition-colors"
               >Experience</a
             >
             <a
               href="#education"
-              class="text-gray-200 hover:text-gray-400 transition-colors"
+              class="text-gray-800 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 transition-colors"
               >Education</a
             >
             <a
               href="#skills"
-              class="text-gray-200 hover:text-gray-400 transition-colors"
+              class="text-gray-800 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 transition-colors"
               >Skills</a
             >
             <a
               href="#projects"
-              class="text-gray-200 hover:text-gray-400 transition-colors"
+              class="text-gray-800 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 transition-colors"
               >Projects</a
             >
             <a
               href="#contact"
-              class="text-gray-200 hover:text-gray-400 transition-colors"
+              class="text-gray-800 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 transition-colors"
               >Contact</a
             >
             <button
               id="dark-mode-toggle"
-              class="p-2 rounded-lg hover:bg-gray-800 transition-all duration-200"
+              class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-200"
             >
-              <i class="fas fa-moon text-gray-400"></i>
+              <i class="fas fa-moon text-gray-600 dark:text-gray-400"></i>
             </button>
           </div>
         </div>
@@ -117,45 +123,49 @@
         <!-- Mobile Navigation -->
         <div
           id="mobile-menu"
-          class="md:hidden fixed top-16 left-0 right-0 bg-gray-900 border-t border-gray-700 shadow-lg transition-all duration-300 ease-in-out"
+          class="md:hidden fixed top-16 left-0 right-0 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 shadow-lg transition-all duration-300 ease-in-out"
         >
           <div class="flex flex-col py-4">
             <a
               href="#about"
-              class="px-6 py-3 text-gray-200 hover:bg-gray-800 transition-colors"
+              class="px-6 py-3 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
               >About</a
             >
             <a
               href="#experience"
-              class="px-6 py-3 text-gray-200 hover:bg-gray-800 transition-colors"
+              class="px-6 py-3 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
               >Experience</a
             >
             <a
               href="#education"
-              class="px-6 py-3 text-gray-200 hover:bg-gray-800 transition-colors"
+              class="px-6 py-3 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
               >Education</a
             >
             <a
               href="#skills"
-              class="px-6 py-3 text-gray-200 hover:bg-gray-800 transition-colors"
+              class="px-6 py-3 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
               >Skills</a
             >
             <a
               href="#projects"
-              class="px-6 py-3 text-gray-200 hover:bg-gray-800 transition-colors"
+              class="px-6 py-3 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
               >Projects</a
             >
             <a
               href="#contact"
-              class="px-6 py-3 text-gray-200 hover:bg-gray-800 transition-colors"
+              class="px-6 py-3 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
               >Contact</a
             >
-            <div class="border-t border-gray-700 mt-2 pt-2">
+            <div
+              class="border-t border-gray-200 dark:border-gray-700 mt-2 pt-2"
+            >
               <button
                 id="dark-mode-toggle-mobile"
-                class="w-full px-6 py-3 flex items-center text-gray-200 hover:bg-gray-800 transition-all duration-200"
+                class="w-full px-6 py-3 flex items-center text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-200"
               >
-                <i class="fas fa-moon text-gray-400 mr-3"></i>
+                <i
+                  class="fas fa-moon text-gray-600 dark:text-gray-400 mr-3"
+                ></i>
                 <span>Dark Mode</span>
               </button>
             </div>
@@ -175,7 +185,7 @@
           <!-- Left Content -->
           <div class="flex-1 max-w-2xl">
             <div
-              class="welcome-tag inline-flex items-center gap-2 bg-gray-800 rounded-full px-4 py-2 mb-6"
+              class="welcome-tag inline-flex items-center gap-2 bg-white dark:bg-gray-800 rounded-full px-4 py-2 mb-6"
             >
               <span class="text-yellow-500">👋</span>
               <span class="font-medium">Hello There!</span>
@@ -189,7 +199,7 @@
               >
             </h1>
 
-            <p class="text-gray-300 text-lg mb-8 max-w-xl">
+            <p class="text-gray-600 dark:text-gray-300 text-lg mb-8 max-w-xl">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ipsam
               illum dolor quibusdam dolorem, sapiente dolorum iste incidunt
               error quia!
@@ -264,11 +274,11 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-gray-800">
+    <section id="about" class="py-20 bg-gray-50 dark:bg-gray-800">
       <div class="container mx-auto px-6">
         <h2 class="text-3xl font-bold text-center mb-12">About Me</h2>
         <div class="max-w-3xl mx-auto">
-          <p class="text-gray-400 leading-relaxed mb-6">
+          <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
             I am a Bachelor of Science in Information Technology graduate from
             Bulacan State University with a specialization in Web and Mobile
             Development and I aim to work as an IT professional. With a strong
@@ -287,7 +297,7 @@
     <!-- Experience Section -->
     <section
       id="experience"
-      class="relative h-screen py-16 bg-gray-900 overflow-hidden"
+      class="relative h-screen py-16 bg-white dark:bg-gray-900 overflow-hidden"
     >
       <div class="container mx-auto px-4 h-full flex flex-col">
         <h2
@@ -422,29 +432,31 @@
     </section>
 
     <!-- Education Section -->
-    <section id="education" class="py-16 bg-gray-800">
+    <section id="education" class="py-16 bg-gray-50 dark:bg-gray-800">
       <div class="container mx-auto px-4">
         <h2 class="text-3xl font-bold text-center mb-12">Education</h2>
 
         <div class="grid grid-cols-1 md:grid-cols-1 gap-8 max-w-3xl mx-auto">
           <!-- College -->
           <div
-            class="bg-gray-900 rounded-xl shadow-lg p-8 text-center transition-all hover:-translate-y-2"
+            class="bg-white dark:bg-gray-900 rounded-xl shadow-lg p-8 text-center transition-all hover:-translate-y-2"
           >
             <div class="flex flex-col items-center">
               <div
-                class="w-32 h-32 bg-gray-700 rounded-full flex items-center justify-center mb-4"
+                class="w-32 h-32 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center mb-4"
               >
                 <img
                   src="https://unitesandba.wordpress.com/wp-content/uploads/2012/10/10332_134192878089_974785_n.jpg"
                   alt="Bulacan State University Logo"
-                  class="text-gray-500"
+                  class="text-gray-400 dark:text-gray-500"
                 />
               </div>
               <h3 class="text-xl font-bold">
                 Bachelor of Science in Information Technology
               </h3>
-              <p class="text-gray-400 mt-2">Bulacan State University</p>
+              <p class="text-gray-600 dark:text-gray-400 mt-2">
+                Bulacan State University
+              </p>
               <div
                 class="inline-block bg-primary/10 dark:bg-primary-dark/10 px-4 py-2 rounded-full"
               >
@@ -464,31 +476,31 @@
         <h2 class="text-3xl font-bold text-center mb-12">Skills</h2>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
           <div
-            class="skill-icon text-center p-6 bg-gray-900 rounded-lg shadow-lg"
+            class="skill-icon text-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg"
           >
             <i class="fab fa-html5 text-4xl text-orange-500 mb-4"></i>
             <h3 class="font-medium">HTML5</h3>
           </div>
           <div
-            class="skill-icon text-center p-6 bg-gray-900 rounded-lg shadow-lg"
+            class="skill-icon text-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg"
           >
             <i class="fab fa-css3-alt text-4xl text-blue-500 mb-4"></i>
             <h3 class="font-medium">CSS3</h3>
           </div>
           <div
-            class="skill-icon text-center p-6 bg-gray-900 rounded-lg shadow-lg"
+            class="skill-icon text-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg"
           >
             <i class="fab fa-js text-4xl text-yellow-500 mb-4"></i>
             <h3 class="font-medium">JavaScript</h3>
           </div>
           <div
-            class="skill-icon text-center p-6 bg-gray-900 rounded-lg shadow-lg"
+            class="skill-icon text-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg"
           >
             <i class="fab fa-java text-4xl text-blue-400 mb-4"></i>
             <h3 class="font-medium">Java</h3>
           </div>
           <div
-            class="skill-icon text-center p-6 bg-gray-900 rounded-lg shadow-lg"
+            class="skill-icon text-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg"
           >
             <img
               src="img/64px-Spring_Boot.svg.png"
@@ -502,7 +514,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-gray-800">
+    <section id="projects" class="py-20 bg-gray-50 dark:bg-gray-800">
       <div class="container mx-auto px-6">
         <h2 class="text-3xl font-bold text-center mb-12">Projects</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -585,13 +597,15 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gray-800">
+    <section id="contact" class="py-20 bg-gray-50 dark:bg-gray-800">
       <div class="container mx-auto px-6 rounded-xl p-6 text-justify">
-        <h2 class="text-2xl font-semibold text-gray-200 mb-4 text-center">
+        <h2
+          class="text-2xl font-semibold text-gray-800 dark:text-white mb-4 text-center"
+        >
           Contact Me
         </h2>
         <div
-          class="space-y-3 text-lg text-gray-400 flex flex-col items-center justify-normal"
+          class="space-y-3 text-lg text-gray-600 dark:text-gray-300 flex flex-col items-center justify-normal"
         >
           <p>
             <strong>Phone:</strong>
@@ -628,28 +642,28 @@
               <label class="block text-sm font-medium mb-2">Name</label>
               <input
                 type="text"
-                class="w-full px-4 py-2 rounded-lg border border-gray-600 bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-dark"
+                class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-dark"
               />
             </div>
             <div>
               <label class="block text-sm font-medium mb-2">Email</label>
               <input
                 type="email"
-                class="w-full px-4 py-2 rounded-lg border border-gray-600 bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-dark"
+                class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-dark"
               />
             </div>
             <div>
               <label class="block text-sm font-medium mb-2">Phone Number</label>
               <input
                 type="tel"
-                class="w-full px-4 py-2 rounded-lg border border-gray-600 bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-dark"
+                class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-dark"
               />
             </div>
             <div>
               <label class="block text-sm font-medium mb-2">Message</label>
               <textarea
                 rows="4"
-                class="w-full px-4 py-2 rounded-lg border border-gray-600 bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-dark"
+                class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-dark"
               ></textarea>
             </div>
             <button
@@ -664,29 +678,31 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 py-8">
+    <footer class="bg-gray-50 dark:bg-gray-800 py-8">
       <div class="container mx-auto px-6">
         <div class="flex flex-col md:flex-row justify-between items-center">
           <div class="text-center md:text-left mb-4 md:mb-0">
             <h3 class="text-xl font-bold">STEVEN BRIAN USON</h3>
-            <p class="text-gray-400">Software Quality Assurance Engineer I</p>
+            <p class="text-gray-600 dark:text-gray-400">
+              Software Quality Assurance Engineer I
+            </p>
           </div>
           <div class="flex space-x-4">
             <a
               href="#"
-              class="text-gray-400 hover:text-primary dark:hover:text-primary-dark transition-colors"
+              class="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary-dark transition-colors"
             >
               <i class="fab fa-github text-2xl"></i>
             </a>
             <a
               href="#"
-              class="text-gray-400 hover:text-primary dark:hover:text-primary-dark transition-colors"
+              class="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary-dark transition-colors"
             >
               <i class="fab fa-linkedin text-2xl"></i>
             </a>
             <a
               href="#"
-              class="text-gray-400 hover:text-primary dark:hover:text-primary-dark transition-colors"
+              class="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary-dark transition-colors"
             >
               <i class="fab fa-twitter text-2xl"></i>
             </a>
@@ -717,10 +733,10 @@
       function updateDarkModeIcon(isDark) {
         darkModeIcon.className = isDark
           ? "fas fa-sun text-yellow-500"
-          : "fas fa-moon text-gray-400";
+          : "fas fa-moon text-gray-600 dark:text-gray-400";
         darkModeIconMobile.className = isDark
           ? "fas fa-sun text-yellow-500 mr-2"
-          : "fas fa-moon text-gray-400 mr-2";
+          : "fas fa-moon text-gray-600 dark:text-gray-400 mr-2";
       }
 
       // Initial icon state
