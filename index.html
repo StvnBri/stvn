@@ -40,7 +40,7 @@
     </style>
   </head>
   <body
-    class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-200"
+    class="bg-white dark:bg-gray-900 text-gray-800 dark:tonext-gray-200 transition-colors duration-200"
   >
     <!-- Navigation -->
     <nav
@@ -51,7 +51,7 @@
           <!-- Logo -->
           <div class="flex items-center">
             <a
-              href="#"
+              href="index.html"
               class="text-2xl font-bold text-gray-600 dark:text-gray-200"
               >STVN</a
             >
@@ -102,7 +102,7 @@
               >Skills</a
             >
             <a
-              href="#projects"
+              href="pages/projects.html"
               class="text-gray-800 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 transition-colors"
               >Projects</a
             >
@@ -147,7 +147,7 @@
               >Skills</a
             >
             <a
-              href="#projects"
+              href="pages/projects.html"
               class="px-6 py-3 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
               >Projects</a
             >
@@ -199,14 +199,14 @@
               >
             </h1>
 
-            <p class="text-gray-600 dark:text-gray-300 text-lg mb-8 max-w-xl">
+            <!-- <p class="text-gray-600 dark:text-gray-300 text-lg mb-8 max-w-xl">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ipsam
               illum dolor quibusdam dolorem, sapiente dolorum iste incidunt
-              error quia!
-              <!-- I'm a passionate Software Quality Assurance Engineer with
+              error quia! -->
+            <!-- I'm a passionate Software Quality Assurance Engineer with
               expertise in automotive systems testing, collaborating with global
               teams to deliver reliable software solutions. -->
-            </p>
+            <!-- </p> -->
 
             <div class="flex items-center gap-4">
               <!-- <a href="#portfolio" class="view-portfolio-btn group">
@@ -225,7 +225,7 @@
                   />
                 </svg>
               </a> -->
-              <a href="#contact" class="hire-me-btn"> Contact Me </a>
+              <!-- <a href="#contact" class="hire-me-btn"> Contact Me </a> -->
             </div>
 
             <!-- Tags -->
@@ -273,158 +273,160 @@
       ></div>
     </section>
 
+    <!-- About me Section -->
     <!-- About Section -->
     <section id="about" class="py-20 bg-gray-50 dark:bg-gray-800">
       <div class="container mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center mb-12">About Me</h2>
-        <div class="max-w-3xl mx-auto">
-          <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
-            I am a Bachelor of Science in Information Technology graduate from
-            Bulacan State University with a specialization in Web and Mobile
-            Development and I aim to work as an IT professional. With a strong
-            passion for different fields of IT, I am motivated to learn and
-            committed to delivering quality work to ensure project success.
-          </p>
-          <!-- <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id sed
-            consequuntur perspiciatis vitae dolore accusantium nihil explicabo
-            nisi temporibus dolorem.
-          </p> -->
+        <h2
+          class="text-4xl font-bold text-center mb-6 text-gray-800 dark:text-gray-200"
+        >
+          About Me
+        </h2>
+        <!-- <p class="text-lg text-center text-gray-600 dark:text-gray-400 mb-12">
+          Passionate Software QA Engineer | Web Developer | Tech Enthusiast
+        </p> -->
+
+        <div
+          class="flex flex-col md:flex-row items-center gap-12 max-w-5xl mx-auto"
+        >
+          <!-- Image Container with Zoom Effect -->
+          <div
+            class="relative w-full md:w-1/2 overflow-hidden rounded-2xl shadow-lg"
+          >
+            <img
+              src="img/stvn.jpg"
+              alt="Steven Brian Feting Uson"
+              class="w-full h-96 object-cover transition-transform duration-500 ease-in-out hover:scale-110"
+            />
+          </div>
+
+          <!-- Text Content -->
+          <div class="w-full md:w-1/2">
+            <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+              I am a Bachelor of Science in Information Technology graduate from
+              <span class="font-semibold text-primary"
+                >Bulacan State University</span
+              >, specializing in Web and Mobile Development. I have a strong
+              passion for software quality assurance, automation, and web
+              technologies.
+            </p>
+            <p
+              class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mt-4"
+            >
+              My goal is to continuously improve my skills and contribute to
+              innovative projects that enhance user experience and software
+              reliability. I thrive on learning and solving complex problems
+              through technology.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="mt-6 flex gap-4">
+              <a
+                href="resume.pdf"
+                download
+                class="px-6 py-3 bg-primary text-white font-semibold rounded-lg shadow-md hover:bg-primary-dark transition-all"
+              >
+                Download Resume
+              </a>
+              <a
+                href="#contact"
+                class="px-6 py-3 border-2 border-primary text-primary font-semibold rounded-lg hover:bg-primary hover:text-white transition-all"
+              >
+                Contact Me
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Experience Section -->
-    <section
-      id="experience"
-      class="relative h-screen py-16 bg-white dark:bg-gray-900 overflow-hidden"
-    >
-      <div class="container mx-auto px-4 h-full flex flex-col">
+    <section id="experience" class="py-16 bg-white dark:bg-gray-900">
+      <div class="container mx-auto px-6">
         <h2
-          class="text-3xl font-bold text-center mb-12 flex-shrink-0 opacity-0"
+          class="text-4xl font-bold text-center mb-8 text-gray-800 dark:text-gray-200"
         >
           Work Experience
         </h2>
 
-        <div class="relative flex-1 min-h-0">
-          <div class="absolute inset-0 overflow-y-auto custom-scrollbar">
-            <div class="experience-timeline">
-              <!-- Current Role -->
-              <div class="timeline-item">
-                <div class="timeline-marker"></div>
-                <div class="timeline-content">
-                  <div class="timeline-date">2023 - Present</div>
-                  <div class="timeline-card">
-                    <div class="timeline-header">
-                      <h3 class="text-xl font-bold mb-2">
-                        Software Quality Assurance Engineer
-                      </h3>
-                      <div class="company-info">
-                        <span class="company tsukiden"
-                          >Tsukiden Global Solutions Inc.</span
-                        >
-                        <span class="location">Ortigas, Pasig City</span>
-                      </div>
-                      <div class="client-badge">
-                        <span class="client-label text-red-700"
-                          ><i>Client:</i></span
-                        >
-                        DENSO TECHNO PHILIPPINES, INC.
-                      </div>
-                    </div>
-                    <div class="timeline-body">
-                      <div class="achievement-list">
-                        <div class="achievement-item">
-                          <h4>Unit Testing (Automotive Systems)</h4>
-                          <p>
-                            Developed and executed comprehensive unit tests for
-                            C-based automotive systems, utilizing Microsoft
-                            Excel with custom add-in tools for process flow
-                            simulation and error detection.
-                          </p>
-                        </div>
-                        <div class="achievement-item">
-                          <h4>Automation Testing</h4>
-                          <p>
-                            Implemented automated testing solutions for critical
-                            automotive components including sensors, Controller
-                            Area Network (CAN), ECUs, and vehicle speed.
-                          </p>
-                        </div>
-                        <div class="achievement-item">
-                          <h4>Integration Testing</h4>
-                          <p>
-                            Led system integration testing using WinAMS,
-                            ensuring seamless module interaction and maintaining
-                            high system reliability standards.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Experience Card 1 -->
+          <div
+            class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all"
+          >
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+              Software QA Engineer
+            </h3>
+            <p class="text-sm text-gray-500">Tsukiden Global Solutions Inc.</p>
+            <p class="text-sm text-gray-500">
+              2023 - Present | Ortigas, Pasig City
+            </p>
+            <div class="mt-4 text-sm text-gray-700 dark:text-gray-300">
+              <ul class="list-disc pl-5 space-y-2 experience-content">
+                <li>
+                  Developed and executed unit tests for automotive systems.
+                </li>
+                <li>Automated testing for vehicle components and ECUs.</li>
+                <li>Led system integration testing using WinAMS.</li>
+                <li class="extra-content hidden">
+                  Performed debugging and troubleshooting of embedded C
+                  programs.
+                </li>
+                <li class="extra-content hidden">
+                  Worked with global teams to improve test efficiency.
+                </li>
+              </ul>
+              <button class="text-blue-500 hover:underline mt-2 read-more-btn">
+                Read More
+              </button>
+            </div>
+          </div>
 
-              <!-- Previous Role -->
-              <div class="timeline-item">
-                <div class="timeline-marker"></div>
-                <div class="timeline-content">
-                  <div class="timeline-date">2023</div>
-                  <div class="timeline-card">
-                    <div class="timeline-header">
-                      <h3 class="text-xl font-bold mb-2 text-start">
-                        Digital Marketing Engineer
-                      </h3>
-                      <div class="company-info">
-                        <span class="company">Xentra Solutions Inc.</span>
-                        <span class="location">Malolos, Bulacan</span>
-                      </div>
-                    </div>
-                    <div class="timeline-body">
-                      <div class="achievement-list">
-                        <div class="achievement-item text-start">
-                          <h4>Digital Marketing Prompt Engineer</h4>
-                          <p>
-                            Engineered and executed data-driven digital
-                            marketing campaigns, achieving a 45% increase in
-                            user engagement across platforms.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <!-- Experience Card 2 -->
+          <div
+            class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all"
+          >
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+              Digital Marketing Engineer
+            </h3>
+            <p class="text-sm text-gray-500">Xentra Solutions Inc.</p>
+            <p class="text-sm text-gray-500">2023 | Malolos, Bulacan</p>
+            <div class="mt-4 text-sm text-gray-700 dark:text-gray-300">
+              <ul class="list-disc pl-5 space-y-2 experience-content">
+                <li>Executed data-driven digital marketing campaigns.</li>
+                <li>Increased user engagement by 45%.</li>
+                <li class="extra-content hidden">
+                  Optimized SEO strategies for improved web traffic.
+                </li>
+                <li class="extra-content hidden">
+                  Managed content creation and social media engagement.
+                </li>
+              </ul>
+              <!-- <button class="text-blue-500 hover:underline mt-2 read-more-btn">
+                Read More
+              </button> -->
+            </div>
+          </div>
 
-              <!-- Earlier Role -->
-              <div class="timeline-item">
-                <div class="timeline-marker"></div>
-                <div class="timeline-content">
-                  <div class="timeline-date">2019</div>
-                  <div class="timeline-card">
-                    <div class="timeline-header">
-                      <h3 class="text-xl font-bold mb-2">
-                        Technical Support Staff
-                      </h3>
-                      <div class="company-info">
-                        <span class="company pldt">PLDT Telephone Company</span>
-                        <span class="location">Malolos, Bulacan</span>
-                      </div>
-                    </div>
-                    <div class="timeline-body">
-                      <div class="achievement-list">
-                        <div class="achievement-item">
-                          <h4>Technical Support Staff</h4>
-                          <p>
-                            Interned as a staff member in the Main Distribution
-                            Frame office.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <!-- Experience Card 3 -->
+          <div
+            class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all"
+          >
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+              Technical Support Staff
+            </h3>
+            <p class="text-sm text-gray-500">PLDT Telephone Company</p>
+            <p class="text-sm text-gray-500">2019 | Malolos, Bulacan</p>
+            <div class="mt-4 text-sm text-gray-700 dark:text-gray-300">
+              <ul class="list-disc pl-5 space-y-2 experience-content">
+                <li>Interned at the Main Distribution Frame office.</li>
+                <li class="extra-content hidden">
+                  Handled customer troubleshooting and basic technical support.
+                </li>
+              </ul>
+              <!-- <button class="text-blue-500 hover:underline mt-2 read-more-btn">
+                Read More
+              </button> -->
             </div>
           </div>
         </div>
@@ -471,55 +473,87 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-20">
-      <div class="container mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center mb-12">Skills</h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-          <div
-            class="skill-icon text-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg"
-          >
-            <i class="fab fa-html5 text-4xl text-orange-500 mb-4"></i>
-            <h3 class="font-medium">HTML5</h3>
+    <section id="skills" class="py-20 bg-white dark:bg-gray-900">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">
+          My skills & software
+        </h2>
+        <p class="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto mb-12">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus mattis
+          nunc aliquam tincidunt est non.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <!-- Design -->
+          <div class="p-6">
+            <div
+              class="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-xl flex items-center justify-center mx-auto mb-4"
+            >
+              <i
+                class="fas fa-pencil-ruler text-blue-600 dark:text-blue-300 text-3xl"
+              ></i>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+              Design
+            </h3>
+            <ul class="text-gray-500 dark:text-gray-400 mt-3">
+              <li>UI/UX Design</li>
+              <li>Product Design</li>
+              <li>Web Design</li>
+              <li>Design Thinking</li>
+              <li>Branding</li>
+            </ul>
           </div>
-          <div
-            class="skill-icon text-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg"
-          >
-            <i class="fab fa-css3-alt text-4xl text-blue-500 mb-4"></i>
-            <h3 class="font-medium">CSS3</h3>
+          <!-- Development -->
+          <div class="p-6">
+            <div
+              class="w-16 h-16 bg-yellow-100 dark:bg-yellow-900 rounded-xl flex items-center justify-center mx-auto mb-4"
+            >
+              <i
+                class="fas fa-laptop-code text-yellow-600 dark:text-yellow-300 text-3xl"
+              ></i>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+              Development
+            </h3>
+            <ul class="text-gray-500 dark:text-gray-400 mt-3">
+              <li>HTML & CSS</li>
+              <li>JavaScript</li>
+              <li>React</li>
+              <li>React Native</li>
+              <li>No Code</li>
+            </ul>
           </div>
-          <div
-            class="skill-icon text-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg"
-          >
-            <i class="fab fa-js text-4xl text-yellow-500 mb-4"></i>
-            <h3 class="font-medium">JavaScript</h3>
-          </div>
-          <div
-            class="skill-icon text-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg"
-          >
-            <i class="fab fa-java text-4xl text-blue-400 mb-4"></i>
-            <h3 class="font-medium">Java</h3>
-          </div>
-          <div
-            class="skill-icon text-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg"
-          >
-            <img
-              src="img/64px-Spring_Boot.svg.png"
-              alt="Spring Boot"
-              class="fab w-12 h-12 mb-4"
-            />
-            <h3 class="font-medium">Spring Boot</h3>
+          <!-- Tools -->
+          <div class="p-6">
+            <div
+              class="w-16 h-16 bg-purple-100 dark:bg-purple-900 rounded-xl flex items-center justify-center mx-auto mb-4"
+            >
+              <i
+                class="fas fa-tools text-purple-600 dark:text-purple-300 text-3xl"
+              ></i>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+              Tools
+            </h3>
+            <ul class="text-gray-500 dark:text-gray-400 mt-3">
+              <li>Webflow</li>
+              <li>Figma</li>
+              <li>Notion</li>
+              <li>Photoshop</li>
+              <li>Illustrator</li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-gray-50 dark:bg-gray-800">
+    <!-- <section id="projects" class="py-20 bg-gray-50 dark:bg-gray-800">
       <div class="container mx-auto px-6">
         <h2 class="text-3xl font-bold text-center mb-12">Projects</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Project Card 1 -->
-          <div
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> -->
+    <!-- Project Card 1 -->
+    <!-- <div
             class="project-card relative rounded-lg overflow-hidden shadow-lg"
           >
             <img src="" alt="Project 1" class="w-full" />
@@ -539,9 +573,9 @@
                 </a>
               </div>
             </div>
-          </div>
-          <!-- Project Card 2 -->
-          <div
+          </div> -->
+    <!-- Project Card 2 -->
+    <!-- <div
             class="project-card relative rounded-lg overflow-hidden shadow-lg"
           >
             <img
@@ -565,9 +599,9 @@
                 </a>
               </div>
             </div>
-          </div>
-          <!-- Project Card 3 -->
-          <div
+          </div> -->
+    <!-- Project Card 3 -->
+    <!-- <div
             class="project-card relative rounded-lg overflow-hidden shadow-lg"
           >
             <img
@@ -594,7 +628,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Contact Section -->
     <section id="contact" class="py-20 bg-gray-50 dark:bg-gray-800">
@@ -898,6 +932,18 @@
       document.addEventListener("DOMContentLoaded", () => {
         const experienceSection = document.getElementById("experience");
         experienceObserver.observe(experienceSection);
+      });
+
+      // JavaScript for Read More Feature
+      document.querySelectorAll(".read-more-btn").forEach((button) => {
+        button.addEventListener("click", function () {
+          const extraContent =
+            this.previousElementSibling.querySelectorAll(".extra-content");
+          const isHidden = extraContent[0].classList.contains("hidden");
+
+          extraContent.forEach((item) => item.classList.toggle("hidden"));
+          this.textContent = isHidden ? "Read Less" : "Read More";
+        });
       });
     </script>
   </body>
