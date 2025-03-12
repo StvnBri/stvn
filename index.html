@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stvn</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
     <script>
       tailwind.config = {
         darkMode: "class",
@@ -40,7 +44,7 @@
     </style>
   </head>
   <body
-    class="bg-white dark:bg-gray-900 text-gray-800 dark:tonext-gray-200 transition-colors duration-200"
+    class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-200"
   >
     <!-- Navigation -->
     <nav
@@ -230,13 +234,18 @@
 
             <!-- Tags -->
             <div class="flex flex-wrap gap-3 mt-8">
+              <span class="skill-tag">C</span>
+              <span class="skill-tag">C++</span>
+              <span class="skill-tag">Java</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">Tailwind</span>
+              <span class="skill-tag">Bootstrap</span>
               <span class="skill-tag">UI/UX Design</span>
               <span class="skill-tag">Web Development</span>
+              <span class="skill-tag">Figma</span>
               <span class="skill-tag">Automation Testing</span>
-              <span class="skill-tag">C Programming</span>
               <span class="skill-tag">WinAMS</span>
               <span class="skill-tag">Hew</span>
-              <span class="skill-tag">Figma</span>
               <span class="skill-tag">Manual Testing</span>
               <span class="skill-tag">Unit Testing</span>
               <span class="skill-tag">Agile</span>
@@ -278,7 +287,6 @@
     </section>
 
     <!-- About me Section -->
-    <!-- About Section -->
     <section id="about" class="py-20 bg-gray-50 dark:bg-gray-800">
       <div class="container mx-auto px-6">
         <h2
@@ -294,14 +302,15 @@
           class="flex flex-col md:flex-row items-center gap-12 max-w-5xl mx-auto"
         >
           <!-- Image Container with Zoom Effect -->
-          <div
-            class="relative w-full md:w-1/2 overflow-hidden rounded-2xl shadow-lg"
-          >
+          <div class="relative group w-full md:w-1/2 overflow-hidden rounded-2xl shadow-lg">
             <img
               src="img/stvn.jpg"
               alt="Steven Brian Feting Uson"
               class="w-full h-96 object-cover transition-transform duration-500 ease-in-out hover:scale-110"
             />
+            <div class="absolute bottom-0 left-0 right-0 text-white text-sm p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              Photo by Michaela Atienza
+            </div>
           </div>
 
           <!-- Text Content -->
@@ -368,16 +377,21 @@
             <div class="mt-4 text-sm text-gray-700 dark:text-gray-300">
               <ul class="list-disc pl-5 space-y-2 experience-content">
                 <li>
-                  Developed and executed unit tests for automotive systems.
-                </li>
-                <li>Automated testing for vehicle components and ECUs.</li>
-                <li>Led system integration testing using WinAMS.</li>
-                <li class="extra-content hidden">
-                  Performed debugging and troubleshooting of embedded C
-                  programs.
+                  Unit Testing (Automotive Systems & DSL/GAS Modules): Developed
+                  and executed unit tests for C-based automotive systems using
+                  Microsoft Excel and add-in tools to simulate process flows and
+                  filter errors. Debugged using HEW and assessed test coverage
+                  with WinAMS.
                 </li>
                 <li class="extra-content hidden">
-                  Worked with global teams to improve test efficiency.
+                  Automation Testing (Automotive Systems): Tested modules
+                  related to sensors, Controller Area Network (CAN), ECUs,
+                  vehicle speed, and other automotive components.
+                </li>
+                <li class="extra-content hidden">
+                  Integration Testing (WinAMS): Conducted integration testing to
+                  identify defects in module integration, ensuring system
+                  reliability.
                 </li>
               </ul>
               <button class="text-blue-500 hover:underline mt-2 read-more-btn">
@@ -391,20 +405,13 @@
             class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all"
           >
             <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-              Digital Marketing Engineer
+              Digital Marketing Prompt Engineer
             </h3>
             <p class="text-sm text-gray-500">Xentra Solutions Inc.</p>
             <p class="text-sm text-gray-500">2023 | Malolos, Bulacan</p>
             <div class="mt-4 text-sm text-gray-700 dark:text-gray-300">
               <ul class="list-disc pl-5 space-y-2 experience-content">
-                <li>Executed data-driven digital marketing campaigns.</li>
-                <li>Increased user engagement by 45%.</li>
-                <li class="extra-content hidden">
-                  Optimized SEO strategies for improved web traffic.
-                </li>
-                <li class="extra-content hidden">
-                  Managed content creation and social media engagement.
-                </li>
+                <li>Interned in Digital Marketing</li>
               </ul>
               <!-- <button class="text-blue-500 hover:underline mt-2 read-more-btn">
                 Read More
@@ -452,7 +459,7 @@
                 class="w-32 h-32 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center mb-4"
               >
                 <img
-                  src="https://unitesandba.wordpress.com/wp-content/uploads/2012/10/10332_134192878089_974785_n.jpg"
+                  src="/stvn/img/Bulsu.png"
                   alt="Bulacan State University Logo"
                   class="text-gray-400 dark:text-gray-500"
                 />
@@ -723,7 +730,7 @@
             </button>
           </form>
         </div>
-      </div> -->
+      </div>
     </section>
 
     <!-- Footer -->
@@ -762,7 +769,7 @@
         </div> -->
       </div>
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
     <script>
       // Dark mode toggle
       const darkModeToggle = document.getElementById("dark-mode-toggle");
