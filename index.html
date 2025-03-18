@@ -363,10 +363,7 @@
     </section>
 
     <!-- Experience Section -->
-    <section
-      id="experience"
-      class="h-[70vh] py-16 bg-[#FDFBEE] dark:bg-gray-900"
-    >
+    <section id="experience" class="h-[70vh] py-16 bg-gray-50 dark:bg-gray-900">
       <div class="mx-auto px-6">
         <h2
           class="text-4xl font-bold text-center mb-8 text-gray-800 dark:text-gray-200"
@@ -720,8 +717,7 @@
     </section> -->
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gray-50 dark:bg-gray-800">
-      <!-- <div class="container mx-auto px-6 rounded-xl p-6 text-justify">
+    <!-- <div class="container mx-auto px-6 rounded-xl p-6 text-justify">
         <h2
           class="text-2xl font-semibold text-gray-800 dark:text-white mb-4 text-center"
         >
@@ -757,46 +753,69 @@
           </p>
         </div>
       </div> -->
-
-      <!-- CTA Action -->
+    <!-- CTA Action -->
+    <section id="contact" class="py-20 bg-gray-50 dark:bg-gray-800">
       <div class="container mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center mb-12">Contact me</h2>
-        <div class="max-w-2xl mx-auto">
-          <form class="space-y-6">
+        <h2
+          class="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-gray-100"
+        >
+          Contact Me
+        </h2>
+        <div
+          class="max-w-2xl mx-auto bg-white dark:bg-gray-900 p-8 rounded-lg shadow-lg"
+        >
+          <form class="space-y-6" id="contact-form">
             <div>
-              <label class="block text-sm font-medium mb-2">Name</label>
+              <label
+                class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+                >Name</label
+              >
               <input
                 type="text"
-                class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-dark"
+                id="name"
+                placeholder="Enter your name"
+                class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-dark"
+                required
               />
             </div>
             <div>
-              <label class="block text-sm font-medium mb-2">Email</label>
+              <label
+                class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+                >Email</label
+              >
               <input
                 type="email"
-                class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-dark"
+                id="email"
+                placeholder="Enter your email"
+                class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-dark"
+                required
               />
             </div>
-            <!-- <div>
-              <label class="block text-sm font-medium mb-2">Phone Number</label>
-              <input
-                type="tel"
-                class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-dark"
-              />
-            </div> -->
             <div>
-              <label class="block text-sm font-medium mb-2">Message</label>
+              <label
+                class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+                >Message</label
+              >
               <textarea
+                id="message"
                 rows="4"
-                class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-dark"
+                placeholder="Write your message here..."
+                class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-dark"
+                required
               ></textarea>
             </div>
             <button
               type="submit"
-              class="w-full bg-primary dark:bg-primary-dark text-white py-3 rounded-lg hover:opacity-90 transition-opacity"
+              class="w-full bg-primary dark:bg-primary-dark text-white py-3 rounded-lg hover:opacity-90 transition-all transform hover:scale-105 flex items-center justify-center gap-2"
             >
               Send Message
             </button>
+            <p
+              id="success-message"
+              class="hidden text-center text-green-600 font-medium mt-4"
+            >
+              Your message has been sent successfully!
+            </p>
           </form>
         </div>
       </div>
@@ -842,6 +861,12 @@
       </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+
+    <!-- For CTA email -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
+    ></script>
 
     <script>
       // Dark mode toggle
@@ -973,5 +998,36 @@
       });
     </script>
     <script src="js/main.js"></script>
+
+    <!-- For Contact Form -->
+    <script>
+      // Initialize EmailJS with your user ID
+      emailjs.init("9GFFeFxHFZllMtlwN"); // Replace with your EmailJS User ID
+
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent default form submission
+
+          const formData = {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            message: document.getElementById("message").value,
+          };
+
+          // Send the form data to EmailJS
+          emailjs.sendForm("service_44y4064", "template_rt7hvav", this).then(
+            function () {
+              document
+                .getElementById("success-message")
+                .classList.remove("hidden"); // Show success message
+              document.getElementById("contact-form").reset(); // Reset the form
+            },
+            function (error) {
+              alert("Failed to send message. Please try again.");
+            }
+          );
+        });
+    </script>
   </body>
 </html>
