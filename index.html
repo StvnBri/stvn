@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stvn</title>
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- For Swiper JS -->
     <link
-      href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css"
       rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+
     <script>
       tailwind.config = {
         darkMode: "class",
@@ -195,9 +198,12 @@
               <span class="font-medium">Hello There!</span>
             </div>
 
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+            <h1 class="m16 text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
               I'm
-              <span class="text-gradient">Steven</span>,<br />
+              <span class="text-wrapper">
+                <span class="letters">Steven</span>,<br />
+              </span>
+
               <span class="profession-text"
                 >Software Quality Assurance Engineer</span
               >
@@ -357,95 +363,148 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="py-16 bg-white dark:bg-gray-900">
-      <div class="container mx-auto px-6">
+    <section
+      id="experience"
+      class="h-[70vh] py-16 bg-[#FDFBEE] dark:bg-gray-900"
+    >
+      <div class="mx-auto px-6">
         <h2
           class="text-4xl font-bold text-center mb-8 text-gray-800 dark:text-gray-200"
         >
           Work Experience
         </h2>
+        <!-- start stacked card -->
+        <div
+          class="swiper w-[90vw] max-w-[600px] h-[60vh] max-h-[400px] sm:w-[500px] sm:h-[300px] md:w-[600px] md:h-[400px]"
+        >
+          <div class="swiper-wrapper">
+            <!-- Company 1 -->
+            <div
+              class="swiper-slide bg-white dark:bg-green-700 w-[90%] max-w-[550px] h-[100%] max-h-[100%] rounded-xl flex flex-col items-start justify-start relative p-10 shadow-lg transition-transform duration-300"
+            >
+              <h1 class="text-2xl font-semibold text-lightText mb-3">
+                Software QA Engineer
+              </h1>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Experience Card 1 -->
-          <div
-            class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all"
-          >
-            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-              Software QA Engineer
-            </h3>
-            <p class="text-sm text-gray-500">Tsukiden Global Solutions Inc.</p>
-            <p class="text-sm text-gray-500">
-              2023 - Present | Ortigas, Pasig City
-            </p>
-            <div class="mt-4 text-sm text-gray-700 dark:text-gray-300">
-              <ul class="list-disc pl-5 space-y-2 experience-content">
-                <li>
-                  Unit Testing (Automotive Systems & DSL/GAS Modules): Developed
-                  and executed unit tests for C-based automotive systems using
-                  Microsoft Excel and add-in tools to simulate process flows and
-                  filter errors. Debugged using HEW and assessed test coverage
-                  with WinAMS.
-                </li>
-                <li class="extra-content hidden">
-                  Automation Testing (Automotive Systems): Tested modules
-                  related to sensors, Controller Area Network (CAN), ECUs,
-                  vehicle speed, and other automotive components.
-                </li>
-                <li class="extra-content hidden">
-                  Integration Testing (WinAMS): Conducted integration testing to
-                  identify defects in module integration, ensuring system
-                  reliability.
-                </li>
-              </ul>
-              <button class="text-blue-500 hover:underline mt-2 read-more-btn">
-                Read More
-              </button>
+              <div
+                class="border-b border-lightText opacity-50 w-full mb-1"
+              ></div>
+
+              <h2 class="text-md font-medium text-lightText">
+                Tsukiden Global Solutions Inc.
+              </h2>
+
+              <p class="text-lightText text-sm mb-5">
+                2023 - Present | Ortigas, Pasig City
+                <br />
+                Client: Denso Techno Philippines, Inc.
+              </p>
+
+              <div
+                class="text-lightText text-sm overflow-y-scroll scrolling-auto"
+              >
+                <ul class="list-disc list-inside leading-relaxed">
+                  <li class="mb-2">
+                    <strong class="text-lightText text-md"
+                      >Unit Testing (Automotive Systems & DSL/GAS
+                      Modules):</strong
+                    ><br />
+                    Developed and executed unit tests for C-based automotive
+                    systems using Microsoft Excel and add-in tools to simulate
+                    process flows and filter errors. Debugged using HEW and
+                    assessed test coverage with WinAMS.
+                  </li>
+                  <li class="mb-2">
+                    <strong class="text-lightText text-md"
+                      >Automation Testing (Automotive Systems):</strong
+                    ><br />
+                    Tested modules related to sensors, Controller Area Network
+                    (CAN), ECUs, vehicle speed, and other automotive components.
+                  </li>
+                  <li class="mb-2">
+                    <strong class="text-lightText text-md"
+                      >Integration Testing (WinAMS):</strong
+                    ><br />
+                    Conducted integration testing to identify defects in module
+                    integration, ensuring system reliability.
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>
-
-          <!-- Experience Card 2 -->
-          <div
-            class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all"
-          >
-            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-              Digital Marketing Prompt Engineer
-            </h3>
-            <p class="text-sm text-gray-500">Xentra Solutions Inc.</p>
-            <p class="text-sm text-gray-500">2023 | Malolos, Bulacan</p>
-            <div class="mt-4 text-sm text-gray-700 dark:text-gray-300">
-              <ul class="list-disc pl-5 space-y-2 experience-content">
-                <li>
-                  Completed an internship in Digital Marketing, where I received
-                  training on leveraging AI to enhance digital marketing
-                  strategies.
-                </li>
-              </ul>
-              <!-- <button class="text-blue-500 hover:underline mt-2 read-more-btn">
-                Read More
-              </button> -->
+            <!-- Company 2 -->
+            <div
+              class="swiper-slide bg-white dark:bg-red-700 w-[90%] max-w-[550px] h-[100%] max-h-[100%] rounded-xl flex flex-col items-start justify-start relative p-6 shadow-lg transition-transform duration-300"
+            >
+              <h1 class="text-2xl font-semibold text-lightText mb-3">
+                Digital Marketing Prompt Engineer
+              </h1>
+              <!-- Divider -->
+              <div
+                class="border-b border-lightText opacity-50 w-full mb-5"
+              ></div>
+              <h2 class="text-lg font-medium text-lightText">
+                Xentra Solutions Inc.
+              </h2>
+              <p class="text-lightText text-sm mb-5">2023 | Malolos, Bulacan</p>
+              <div class="text-lightText text-sm">
+                <ul class="list-disc list-inside">
+                  <li>
+                    Completed an internship in Digital Marketing, where I
+                    received training on leveraging AI to enhance digital
+                    marketing strategies.
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>
-
-          <!-- Experience Card 3 -->
-          <div
-            class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all"
-          >
-            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-              Technical Support Staff
-            </h3>
-            <p class="text-sm text-gray-500">PLDT Telephone Company</p>
-            <p class="text-sm text-gray-500">2019 | Malolos, Bulacan</p>
-            <div class="mt-4 text-sm text-gray-700 dark:text-gray-300">
-              <ul class="list-disc pl-5 space-y-2 experience-content">
-                <li>
-                  Interned in the Main Distribution Frame office and as a
-                  technical support intern, providing troubleshooting and
-                  technical assistance.
-                </li>
-              </ul>
-              <!-- <button class="text-blue-500 hover:underline mt-2 read-more-btn">
-                Read More
-              </button> -->
+            <!-- Company 3 -->
+            <div
+              class="swiper-slide bg-white dark:bg-blue-700 w-[90%] max-w-[550px] h-[100%] max-h-[100%] rounded-xl flex flex-col items-start justify-start relative p-6 shadow-lg transition-transform duration-300"
+            >
+              <h1 class="text-2xl font-semibold text-lightText mb-3">
+                Technical Support Staff
+              </h1>
+              <!-- Divider -->
+              <div
+                class="border-b border-lightText opacity-50 w-full mb-5"
+              ></div>
+              <h2 class="text-lg font-medium text-lightText">
+                PLDT Telephone Company
+              </h2>
+              <p class="text-lightText text-sm mb-5">2019 | Malolos, Bulacan</p>
+              <div class="text-lightText text-sm">
+                <ul class="list-disc list-inside">
+                  <li>
+                    Interned in the Main Distribution Frame office and as a
+                    technical support intern, providing troubleshooting and
+                    technical assistance.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- Company 4 -->
+            <div
+              class="swiper-slide bg-white dark:bg-blue-700 w-[90%] max-w-[550px] h-[100%] max-h-[100%] rounded-xl flex flex-col items-start justify-start relative p-6 shadow-lg transition-transform duration-300"
+            >
+              <h1 class="text-2xl font-semibold text-lightText mb-3">
+                Technical Support Staff
+              </h1>
+              <!-- Divider -->
+              <div
+                class="border-b border-lightText opacity-50 w-full mb-5"
+              ></div>
+              <h2 class="text-lg font-medium text-lightText">COMELEC</h2>
+              <p class="text-lightText text-sm mb-5">
+                2018 | Calumpit, Bulacan
+              </p>
+              <div class="text-lightText text-sm">
+                <ul class="list-disc list-inside">
+                  <li>
+                    Interned in the Main Distribution Frame office and as a
+                    technical support intern, providing troubleshooting and
+                    technical assistance.
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -783,6 +842,7 @@
       </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+
     <script>
       // Dark mode toggle
       const darkModeToggle = document.getElementById("dark-mode-toggle");
@@ -897,89 +957,21 @@
           }
         });
       });
+    </script>
 
-      // Experience section animations
-      function animateExperience() {
-        const section = document.getElementById("experience");
-        const title = section.querySelector("h2");
-        const items = section.querySelectorAll(".timeline-item");
-
-        // Animate title
-        title.style.animation = "fadeInUp 0.6s ease forwards";
-
-        // Animate timeline items
-        items.forEach((item, index) => {
-          const marker = item.querySelector(".timeline-marker");
-          const date = item.querySelector(".timeline-date");
-          const card = item.querySelector(".timeline-card");
-
-          // Set initial states
-          item.style.opacity = "0";
-          item.style.transform = "translateY(30px)";
-          marker.style.opacity = "0";
-          marker.style.transform = "scale(0.8)";
-          date.style.opacity = "0";
-          card.style.opacity = "0";
-          card.style.transform = "translateY(20px)";
-
-          // Animate with delays
-          setTimeout(() => {
-            item.style.transition = "all 0.6s ease";
-            item.style.opacity = "1";
-            item.style.transform = "translateY(0)";
-
-            setTimeout(() => {
-              marker.style.transition =
-                "all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)";
-              marker.style.opacity = "1";
-              marker.style.transform = "scale(1)";
-            }, 200);
-
-            setTimeout(() => {
-              date.style.transition = "all 0.4s ease";
-              date.style.opacity = "1";
-            }, 300);
-
-            setTimeout(() => {
-              card.style.transition =
-                "all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)";
-              card.style.opacity = "1";
-              card.style.transform = "translateY(0)";
-            }, 400);
-          }, index * 200);
-        });
-      }
-
-      // Intersection Observer for experience section
-      const experienceObserver = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              animateExperience();
-              experienceObserver.unobserve(entry.target);
-            }
-          });
+    <!-- For Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      new Swiper(".swiper", {
+        effect: "cards",
+        grabCursor: true,
+        cardsEffect: {
+          perSlideOffset: 10,
+          perSlideRotate: 2,
+          slideShadows: false,
         },
-        { threshold: 0.2 }
-      );
-
-      // Start observing the experience section
-      document.addEventListener("DOMContentLoaded", () => {
-        const experienceSection = document.getElementById("experience");
-        experienceObserver.observe(experienceSection);
-      });
-
-      // JavaScript for Read More Feature
-      document.querySelectorAll(".read-more-btn").forEach((button) => {
-        button.addEventListener("click", function () {
-          const extraContent =
-            this.previousElementSibling.querySelectorAll(".extra-content");
-          const isHidden = extraContent[0].classList.contains("hidden");
-
-          extraContent.forEach((item) => item.classList.toggle("hidden"));
-          this.textContent = isHidden ? "Read Less" : "Read More";
-        });
       });
     </script>
+    <script src="js/main.js"></script>
   </body>
 </html>
